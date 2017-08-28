@@ -1,0 +1,5 @@
+{
+  "url": "set to external url",
+  "port": 3001,
+  "mongoUrl": "mongodb://<your mongodb installation url>"
+}
