@@ -211,8 +211,28 @@ export class BO {
         return deferred.promise;
     }
 
+    saveEDIML(id: string, object: any) {
+        var deferred = q.defer();
+        this.db.index({
+            index: BASE_INDEX,
+            type: EDIML,
+            id: id,
+            body: object
+        }, (err, res, status) => {
+            if (err) {
+                console.log('saveEDIML error', err);
+                deferred.reject(err);
+            } else {
+                console.log('saveEDIML', res);
+                deferred.resolve(res);
+            }
+        })
+        return deferred.promise;
+    }
+
     saveMetadata(object: any) {
         var deferred = q.defer();
+
         /*
                 console.log('ediml', object.ediml);
                 console.log('ediml.fileUri', object.ediml.fileUri);

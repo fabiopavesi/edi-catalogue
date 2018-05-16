@@ -9,7 +9,7 @@ var BASE_INDEX = 'edi-catalogue';
 var EDIML = 'ediml';
 var TEMPLATE = 'template';
 var GENERATED = 'generated';
-var BO = (function () {
+var BO = /** @class */ (function () {
     function BO() {
         var _this = this;
         var db = new db_1.DB();
@@ -196,6 +196,25 @@ var BO = (function () {
             }
             else {
                 deferred.resolve(res.hits.hits);
+            }
+        });
+        return deferred.promise;
+    };
+    BO.prototype.saveEDIML = function (id, object) {
+        var deferred = q.defer();
+        this.db.index({
+            index: BASE_INDEX,
+            type: EDIML,
+            id: id,
+            body: object
+        }, function (err, res, status) {
+            if (err) {
+                console.log('saveEDIML error', err);
+                deferred.reject(err);
+            }
+            else {
+                console.log('saveEDIML', res);
+                deferred.resolve(res);
             }
         });
         return deferred.promise;

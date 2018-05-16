@@ -10,6 +10,41 @@ import {DB} from './model/db';
 import {BO} from './businessLogic/BO';
 import * as fs from 'fs';
 import * as path from 'path';
+import * as q from 'q';
+
+const MD_TOPIC = 'receivedMetadata';
+
+var redis = require("redis");
+var sub = redis.createClient({
+	host: 'redis'
+});
+var pub = redis.createClient({
+	host: 'redis'
+});
+var msg_count = 0;
+
+sub.subscribe(MD_TOPIC);
+
+sub.on("message", function (channel, message) {
+	console.log("sub channel " + channel + ": " + message);
+	if ( channel === MD_TOPIC ) {
+		bo.saveMetadata(JSON.parse(message))
+			.then((result) => {
+				console.log('MD saved');
+			})
+			.catch(err => {
+				console.log('error saving MD', err);
+			})
+	}
+	msg_count += 1;
+	if (msg_count === 3) {
+/*
+		sub.unsubscribe();
+		sub.quit();
+		pub.quit();
+*/
+	}
+});
 
 let config;
 try {
@@ -23,6 +58,12 @@ try {
 var app = express();
 var bo = new BO();
 
+/*
+setTimeout( () => {
+	bo = new BO();
+}, 10000);
+
+*/
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({
     extended: true
@@ -95,12 +136,29 @@ app.get('/discover/:query', (req, res, next) => {
 
 app.post('/metadata', (req, res, next) => {
     // console.log('POST metadata', req.body);
-    bo.saveMetadata(req.body)
+	setTimeout( () => {
+		pub.publish(MD_TOPIC, JSON.stringify(req.body));
+	}, 100);
+	res.status(202).json({
+		status: 202,
+		message: 'Ok'
+	})
+});
+
+app.get('/correctUrls', (req, res, next) => {
+    bo.getMetadata()
         .then((result) => {
-            res.status(200).json(result)
-        })
-        .catch(err => {
-            res.status(500).json(err);
+            const promises = [];
+            for ( const r of result ) {
+                console.log('prima', r._source.fileUri);
+                r._source.fileUri = r._source.fileUri.replace(/http:\/\/localhost:3001/, 'https://enygma.it/edi-catalogue');
+                console.log('dopo', r._source.fileUri);
+                promises.push(bo.saveEDIML(r._id, r._source));
+            }
+            q.all(promises)
+                .then( result3 => {
+                    res.status(200).json(result)
+                })
         })
 })
 
