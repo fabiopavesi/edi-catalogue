@@ -13,13 +13,13 @@ import * as path from 'path';
 import * as q from 'q';
 
 const MD_TOPIC = 'receivedMetadata';
-
+const REDIS_HOST = process.env.REDIS_HOST || 'redis'
 var redis = require("redis");
 var sub = redis.createClient({
-	host: 'redis'
+	host: REDIS_HOST
 });
 var pub = redis.createClient({
-	host: 'redis'
+	host: REDIS_HOST
 });
 var msg_count = 0;
 

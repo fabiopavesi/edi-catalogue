@@ -23,7 +23,7 @@ services:
       - elasticsearch
     restart: always
   elasticsearch:
-    image: elasticsearch:5.6.8
+    image: elasticsearch:5.6
     container_name: elasticsearch
     environment:
       # - cluster.name=docker-cluster

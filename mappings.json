@@ -1,0 +1,1179 @@
+{
+  "edi-catalogue": {
+    "aliases": {},
+    "mappings": {
+      "generated": {
+        "properties": {
+          "xml": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          }
+        }
+      },
+      "ediml": {
+/*
+        "date_detection": false,
+*/
+        "properties": {
+          "baseDocument": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "ediVersion": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "elements": {
+            "properties": {
+              "alternativeTo": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "id": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "items": {
+                "properties": {
+                  "codeValue": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "dataType": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "datasource": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "elementId": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "fixed": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "hasIndex": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "isLanguageNeutral": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "labelValue": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "languageNeutral": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "outIndex": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "path": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "urnValue": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "useCode": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "useURN": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "value": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "label": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "mandatory": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "represents_element": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "root": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "fileId": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "fileUri": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "generator": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "numElements": {
+            "type": "long"
+          },
+          "starterKit": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "starterKitUri": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "templateName": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "timestamp": {
+            "type": "long"
+          },
+          "user": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "version": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "xsltChain": {
+            "properties": {
+              "xslt": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "template": {
+        "properties": {
+          "_xmlns:xsi": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "_xsi:noNamespaceSchemaLocation": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword"
+              }
+            }
+          },
+          "datasources": {
+            "properties": {
+              "codelist": {
+                "properties": {
+                  "_endpointType": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "uri": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "url": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "singleton": {
+                "properties": {
+                  "_endpointType": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_triggerItem": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "query": {
+                    "properties": {
+                      "__cdata": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "url": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "sparql": {
+                "properties": {
+                  "_endpointType": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "query": {
+                    "properties": {
+                      "__cdata": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "url": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "endpointTypes": {
+            "properties": {
+              "endpointType": {
+                "properties": {
+                  "_method": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_queryParameter": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "parameters": {
+                    "properties": {
+                      "parameter": {
+                        "properties": {
+                          "_name": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_value": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "group": {
+            "properties": {
+              "_xml:id": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "element": {
+                "properties": {
+                  "_alternativeTo": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_isMandatory": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_isMultiple": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:id": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "hasRoot": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "help": {
+                    "properties": {
+                      "__text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      },
+                      "_xml:lang": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "label": {
+                    "properties": {
+                      "__text": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      },
+                      "_xml:lang": {
+                        "type": "text",
+                        "fields": {
+                          "keyword": {
+                            "type": "keyword"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "produces": {
+                    "properties": {
+                      "item": {
+                        "properties": {
+                          "_datasource": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_field": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_hasDatatype": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_hasIndex": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_isFixed": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_isLanguageNeutral": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_outIndex": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_queryStringParameter": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_show": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "_xml:id": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "defaultValue": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "eastLongitude": {
+                            "properties": {
+                              "_outIndex": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_queryStringParameter": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "end": {
+                            "properties": {
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "hasPath": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "hasValue": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "help": {
+                            "properties": {
+                              "__text": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_xml:lang": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "id": {
+                            "type": "text",
+                            "fields": {
+                              "keyword": {
+                                "type": "keyword"
+                              }
+                            }
+                          },
+                          "label": {
+                            "properties": {
+                              "__text": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_xml:lang": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "northLatitude": {
+                            "properties": {
+                              "_outIndex": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_queryStringParameter": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "southLatitude": {
+                            "properties": {
+                              "_outIndex": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_queryStringParameter": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "start": {
+                            "properties": {
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "westLongitude": {
+                            "properties": {
+                              "_outIndex": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "_queryStringParameter": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "hasPath": {
+                                "type": "text",
+                                "fields": {
+                                  "keyword": {
+                                    "type": "keyword"
+                                  }
+                                }
+                              },
+                              "label": {
+                                "properties": {
+                                  "__text": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  },
+                                  "_xml:lang": {
+                                    "type": "text",
+                                    "fields": {
+                                      "keyword": {
+                                        "type": "keyword"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "help": {
+                "properties": {
+                  "__text": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:lang": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "label": {
+                "properties": {
+                  "__text": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  },
+                  "_xml:lang": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "metadata": {
+            "properties": {
+              "author": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "description": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "family": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "id": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "name": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              }
+            }
+          },
+          "settings": {
+            "properties": {
+              "baseDocument": {
+                "properties": {
+                  "__cdata": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "metadataEndpoint": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "metadataLanguage": {
+                "properties": {
+                  "_selectionItem": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "requiresValidation": {
+                "type": "boolean"
+              },
+              "sparqlEndpoint": {
+                "type": "text",
+                "fields": {
+                  "keyword": {
+                    "type": "keyword"
+                  }
+                }
+              },
+              "userInterfaceLanguage": {
+                "properties": {
+                  "_xml:lang": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              },
+              "xsltChain": {
+                "properties": {
+                  "xslt": {
+                    "type": "text",
+                    "fields": {
+                      "keyword": {
+                        "type": "keyword"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+const ES_HOST = process.env.ES_HOST || 'elasticsearch'
+const ES_PORT = process.env.ES_PORT || '9200'
 /**
  * Created by fabio on 14/07/2017.
  */
@@ -20,7 +22,7 @@ export class DB {
     public open() {
         let deferred = q.defer();
         this.db = new elasticsearch.Client({
-            host: 'elasticsearch:9200',
+            host: `${ES_HOST}:${ES_PORT}`,
             log: 'trace'
         });
         deferred.resolve(this.db);

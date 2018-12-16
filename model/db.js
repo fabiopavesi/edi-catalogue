@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var fs = require("fs");
 var path = require("path");
+var ES_HOST = process.env.ES_HOST || 'elasticsearch';
+var ES_PORT = process.env.ES_PORT || '9200';
 /**
  * Created by fabio on 14/07/2017.
  */
@@ -18,7 +20,7 @@ var DB = /** @class */ (function () {
     DB.prototype.open = function () {
         var deferred = q.defer();
         this.db = new elasticsearch.Client({
-            host: 'elasticsearch:9200',
+            host: ES_HOST + ":" + ES_PORT,
             log: 'trace'
         });
         deferred.resolve(this.db);
