@@ -1,0 +1,5 @@
+{
+  "url": "https://enygma.it/edi-catalogue/",
+  "port": 3001,
+  "mongoUrl": "mongodb://enygma.it:27017/edi-catalogue"
+}
