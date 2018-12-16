@@ -2,7 +2,7 @@ FROM node:10-alpine
 MAINTAINER fabio@adamassoft.it
 
 WORKDIR /usr/src/app
-COPY . .
+COPY . /usr/src/app
 
 RUN npm install
 
